@@ -60,7 +60,7 @@ def checkWin():
     if board[1] == board[4] == board[7]:
         print(board[7], " WINS!!!")
         flagWin = True
-    if board[2] == board[4] == board[8]:
+    if board[2] == board[5] == board[8]:
         print(board[2], " WINS!!!")
         flagWin = True
     if board[3] == board[6] == board[9]:
@@ -72,7 +72,6 @@ def checkWin():
 
 
 if __name__ == "__main__":
-
     flagPlayer = False
     while flagPlayer == False:
         start = input("Which player do you want to be? (X/O): ")
@@ -84,7 +83,7 @@ if __name__ == "__main__":
             flagPlayer = True
         else:
             print("---ERROR---PLEASE---SELECT---X---OR---Y---")
-            
+
     print("\n" , "You are playing as : " , sign , "\n")
     first = firstPlayer()
     print(first[0] , " is going first!" , "\n")
@@ -113,5 +112,8 @@ if __name__ == "__main__":
         if checks == True:
             break
         counter = counter + 1
+    if checks == False:
+        print("IT IS A DRAW")
     print("\n" , "GAME FINISHED" , "\n")
     drawBoard()
+    
